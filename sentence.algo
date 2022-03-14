@@ -1,0 +1,22 @@
+ALGORITHM SENTENCE
+VAR
+    nbchar,nbword,nbvowel: integer
+    c : CHAR:=""
+BEGIN
+
+    WHILE (c<> ".") DO
+    read (c)
+    nbchar:=nbchar+1;
+        IF (c=" ") THEN
+            nbword= nbword+1;
+        END_IF
+        IF (c= "a" or c="e" or c="i" or c="o" or c="u" or c="y") THEN
+            nbvowel:= nbvowel+1;
+        END_IF
+    END_WHILE
+
+    write("the lenght of the sentence is", nbchar);
+    write("the number of words is", nbword);
+    write("the number of vowels is", nbvowel);
+
+END
